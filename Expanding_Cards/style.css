@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.card-container{
+    display: flex;
+    width: 90vw;
+    gap: 20px;
+}
+
+.card-wrapper__panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+
+.card-wrapper__panel.bitcoin{
+    background-image: url("./assets/img/bitcoin.jpg");
+}
+
+.card-wrapper__panel.ethereum{
+    background-image: url("./assets/img/ethereum.jpg");
+}
+
+.card-wrapper__panel.cardano{
+    background-image: url("./assets/img/cardano.png");
+}
+
+.card-wrapper__panel.litecoin{
+    background-image: url("./assets/img/litecoin.jpg");
+}
+
+.card-wrapper__panel.xrp{
+    background-image: url("./assets/img/xrp.jpg");
+}
+
+.card-wrapper__panel h2 {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.card-wrapper__panel.active {
+    flex:5;
+}
+
+.card-wrapper__panel.active h2 {
+    opacity: 1;
+}
